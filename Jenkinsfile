@@ -44,5 +44,11 @@ pipeline {
       }
     }
 
+    stage('Slack Notification') {
+      steps {
+        slackSend(baseUrl: 'https://hooks.slack.com/services/', channel: '#p', color: '#ff0000', failOnError: true, sendAsText: true, teamDomain: 'p-osu4562', token: 'TT5RR5FMY/BT75V05AP/O6kXurR78Brz0grxGCktV3Wb', username: 'gm_menacer')
+      }
+    }
+
   }
 }

@@ -11,5 +11,21 @@ pipeline {
       }
     }
 
+    stage('Mail Notification') {
+      steps {
+        mail(subject: 'ffffff', body: 'kjsd sdjkbds', to: 'gm_menacer@esi.dz', from: 'gm_menacer@esi.dz', replyTo: 'gm_menacer@esi.dz')
+      }
+    }
+
+    stage('Code Analysis') {
+      steps {
+        withSonarQubeEnv('sonar') {
+          bat 'gradle sonarqube '
+        }
+
+        waitForQualityGate true
+      }
+    }
+
   }
 }

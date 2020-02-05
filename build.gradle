@@ -70,7 +70,6 @@ into('D:\\1cpi\\semestre7\\OUTILS - Outils GL\\tp 2019\\tp88\\outils-kins\\Matri
 
 /*pitest{
 
-    targetClasses = ['com.example.*']  //by default "${project.group}.*"
     targetTests=['com.test.*']
 
 

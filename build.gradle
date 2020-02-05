@@ -19,7 +19,6 @@ repositories {
 
 /*slack {
     message {
-        text = "this is a webhook message to slack "
         channel = '#general'
 
     }
@@ -72,13 +71,7 @@ into('D:\\1cpi\\semestre7\\OUTILS - Outils GL\\tp 2019\\tp88\\outils-kins\\Matri
 
 
 
-/*pitest{
 
-    targetClasses = ['com.example.*']  //by default "${project.group}.*"
-    targetTests=['com.test.*']
-
-
-}*/
 group 'com.example.gradleProject'
 version '1.0'
 

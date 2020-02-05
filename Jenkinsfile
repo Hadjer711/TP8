@@ -22,7 +22,7 @@ pipeline {
         stage('Code Analysis') {
           steps {
             withSonarQubeEnv('sonar') {
-              bat 'gradle sonarqube '
+              bat 'D:\\\\gradle-5.2.1\\\\bin\\\\gradle  sonarqube '
             }
 
           }
@@ -42,7 +42,7 @@ pipeline {
         branch 'master'
       }
       steps {
-        bat 'gradle uploadArchives'
+        bat 'D:\\\\gradle-5.2.1\\\\bin\\\\gradle  uploadArchives'
       }
     }
 

@@ -13,7 +13,7 @@ pipeline {
 
     stage('Mail Notification') {
       steps {
-        mail(subject: 'ffffff', body: 'kjsd sdjkbds', to: 'gh_ishakboushaki@esi.dz', from: 'gh_ishakboushaki@esi.dz', replyTo: 'gh_ishakboushaki@esi.dz')
+        echo 'tet'
       }
     }
 
@@ -25,6 +25,7 @@ pipeline {
               bat 'D:\\\\gradle-5.2.1\\\\bin\\\\gradle  sonarqube '
             }
 
+            waitForQualityGate true
           }
         }
 

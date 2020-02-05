@@ -13,7 +13,7 @@ pipeline {
 
     stage('Mail Notification') {
       steps {
-        mail(subject: 'ffffff', body: 'kjsd sdjkbds', to: 'gm_menacer@esi.dz', from: 'gm_menacer@esi.dz', replyTo: 'gm_menacer@esi.dz')
+        mail(subject: 'ffffff', body: 'kjsd sdjkbds', to: 'gh_ishakboushaki@esi.dz', from: 'gh_ishakboushaki@esi.dz', replyTo: 'gh_ishakboushaki@esi.dz')
       }
     }
 

@@ -19,7 +19,6 @@ repositories {
 
 /*slack {
     message {
-        text = "this is a webhook message to slack "
         channel = '#general'
 
     }

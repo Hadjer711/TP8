@@ -18,7 +18,6 @@ repositories {
 }
 
 /*slack {
-    webhookUrl 'https://hooks.slack.com/services/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'
     message {
         text = "this is a webhook message to slack "
         channel = '#general'

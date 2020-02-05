@@ -3,6 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
+        powershell 'gradle build'
         bat 'gradle build'
         bat 'gradle javadoc'
         archiveArtifacts 'build/libs/**/*.jar'
@@ -38,18 +39,18 @@ pipeline {
     }
 
     stage('Deployment') {
-when{
-branch 'master'
-}
+      when {
+        branch 'master'
+      }
       steps {
         bat 'gradle uploadArchives'
       }
     }
 
     stage('Slack Notification') {
-when{
-branch 'master'
-}
+      when {
+        branch 'master'
+      }
       steps {
         slackSend(baseUrl: 'https://hooks.slack.com/services/', channel: '#p', color: '#ff0000', failOnError: true, sendAsText: true, teamDomain: 'p-osu4562', token: 'TT5RR5FMY/BT75V05AP/O6kXurR78Brz0grxGCktV3Wb', username: 'gm_menacer', message: 'build succ')
       }
